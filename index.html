@@ -698,6 +698,25 @@
     document.getElementById(dotId).classList.add('active');
   }
 
+  // ── Wake Lock — экран не гаснет ──
+  let wakeLock = null;
+  async function requestWakeLock() {
+    try {
+      if ('wakeLock' in navigator) {
+        wakeLock = await navigator.wakeLock.request('screen');
+      }
+    } catch (e) {}
+  }
+  requestWakeLock();
+  document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') requestWakeLock();
+  });
+
+  // ── Автоопределение дня ──
+  const today = new Date();
+  if (today.getMonth() === 5 && today.getDate() === 26) switchDay('fri');
+  else if (today.getMonth() === 5 && today.getDate() === 27) switchDay('sat');
+
   // ── Fullscreen ──
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
