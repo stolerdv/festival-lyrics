@@ -371,6 +371,15 @@
     <button class="btn btn-font-sm" onclick="changeSize(-1)" title="Меньше">A</button>
     <button class="btn btn-font-lg" onclick="changeSize(1)" title="Больше">A</button>
     <div class="divider"></div>
+    <button class="btn" id="btn-fs" onclick="toggleFullscreen()" title="Полный экран">
+      <svg id="icon-expand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M16 21h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+      </svg>
+      <svg id="icon-shrink" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+        <path d="M8 3v3a2 2 0 0 1-2 2H3M21 8h-3a2 2 0 0 1-2-2V3M3 16h3a2 2 0 0 1 2 2v3M16 21v-3a2 2 0 0 1 2-2h3"/>
+      </svg>
+    </button>
+    <div class="divider"></div>
     <div class="theme-dot-wrap active" id="t-blue" onclick="setTheme('','t-blue')" title="Синий">
       <div class="theme-dot dot-blue"></div>
     </div>
@@ -688,6 +697,21 @@
     document.querySelectorAll('.theme-dot-wrap').forEach(d => d.classList.remove('active'));
     document.getElementById(dotId).classList.add('active');
   }
+
+  // ── Fullscreen ──
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen();
+    }
+  }
+
+  document.addEventListener('fullscreenchange', () => {
+    const full = !!document.fullscreenElement;
+    document.getElementById('icon-expand').style.display = full ? 'none' : '';
+    document.getElementById('icon-shrink').style.display = full ? '' : 'none';
+  });
 </script>
 
 </body>
