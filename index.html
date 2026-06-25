@@ -362,6 +362,36 @@
 
     .day-section { display: none; }
     .day-section.active { display: block; }
+
+    /* ── Surprise card ── */
+    .surprise-card {
+      text-align: center;
+      padding: 48px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+    .surprise-icon { font-size: 40px; margin-bottom: 16px; }
+    .surprise-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .surprise-text {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .surprise-date {
+      margin-top: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 0.7;
+    }
   </style>
 </head>
 <body>
@@ -546,89 +576,12 @@
 
   <!-- ══════ СУББОТА ══════ -->
   <div class="day-section" id="day-sat">
-  <div class="song-list">
-
-    <!-- ══ Суббота: Песня 1 ══ -->
-    <div class="song-card" onclick="toggle(this)">
-      <div class="song-header">
-        <div class="song-num">1</div>
-        <div class="song-info">
-          <div class="song-name">Название песни</div>
-          <div class="song-author">Исполнитель</div>
-        </div>
-        <div class="song-arrow">▾</div>
-      </div>
-      <div class="song-body">
-        <div class="lyrics">
-          <div class="section">
-            <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
-          </div>
-        </div>
-      </div>
+    <div class="surprise-card">
+      <div class="surprise-icon">🎵</div>
+      <div class="surprise-title">Это пока сюрприз</div>
+      <div class="surprise-text">Приходите завтра и узнайте,<br>какие песни вас ждут</div>
+      <div class="surprise-date">27 июня · Суббота</div>
     </div>
-
-    <!-- ══ Суббота: Песня 2 ══ -->
-    <div class="song-card" onclick="toggle(this)">
-      <div class="song-header">
-        <div class="song-num">2</div>
-        <div class="song-info">
-          <div class="song-name">Название песни</div>
-          <div class="song-author">Исполнитель</div>
-        </div>
-        <div class="song-arrow">▾</div>
-      </div>
-      <div class="song-body">
-        <div class="lyrics">
-          <div class="section">
-            <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ══ Суббота: Песня 3 ══ -->
-    <div class="song-card" onclick="toggle(this)">
-      <div class="song-header">
-        <div class="song-num">3</div>
-        <div class="song-info">
-          <div class="song-name">Название песни</div>
-          <div class="song-author">Исполнитель</div>
-        </div>
-        <div class="song-arrow">▾</div>
-      </div>
-      <div class="song-body">
-        <div class="lyrics">
-          <div class="section">
-            <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ══ Суббота: Песня 4 ══ -->
-    <div class="song-card" onclick="toggle(this)">
-      <div class="song-header">
-        <div class="song-num">4</div>
-        <div class="song-info">
-          <div class="song-name">Название песни</div>
-          <div class="song-author">Исполнитель</div>
-        </div>
-        <div class="song-arrow">▾</div>
-      </div>
-      <div class="song-body">
-        <div class="lyrics">
-          <div class="section">
-            <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /song-list sat -->
   </div><!-- /day-sat -->
 
   <!-- ── Footer ── -->
@@ -636,7 +589,7 @@
     <span class="footer-label">Кафедральный собор · Караганда</span>
     <div class="footer-links">
 
-      <a class="footer-link ig" href="https://instagram.com/СЮДА_ВСТАВИТЬ" target="_blank" rel="noopener">
+      <a class="footer-link ig" href="https://www.instagram.com/cathedral_krg/" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="2" width="20" height="20" rx="5"/>
           <circle cx="12" cy="12" r="4"/>
@@ -645,14 +598,14 @@
         Instagram
       </a>
 
-      <a class="footer-link yt" href="https://youtube.com/@СЮДА_ВСТАВИТЬ" target="_blank" rel="noopener">
+      <a class="footer-link yt" href="https://www.youtube.com/@parishjosephkrg" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
           <path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.8 5 12 5 12 5s-4.8 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.3.8C6.8 19 12 19 12 19s4.8 0 7-.1c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zM10 15V9l5.5 3-5.5 3z"/>
         </svg>
         YouTube
       </a>
 
-      <a class="footer-link web" href="https://СЮДА_ВСТАВИТЬ" target="_blank" rel="noopener">
+      <a class="footer-link web" href="http://cathedral-karaganda.kz" target="_blank" rel="noopener">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="12" cy="12" r="10"/>
           <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
