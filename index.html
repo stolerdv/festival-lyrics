@@ -193,6 +193,28 @@
       margin-top: 0;
     }
 
+    .reserve-block {
+      margin-top: 8px;
+      padding: 14px 12px 4px;
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      background: var(--bg);
+    }
+    .reserve-block .block-title {
+      margin-top: 0;
+      font-style: italic;
+      color: var(--muted);
+    }
+    .reserve-block .song-list-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .reserve-block .song-card {
+      border-style: dashed;
+      opacity: 0.85;
+    }
+
     .song-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -1017,7 +1039,9 @@
       </div>
     </div>
 
+    <div class="reserve-block">
     <div class="block-title">Запас</div>
+    <div class="song-list-inner">
 
     <!-- ══ Песня 9 ══ -->
     <div class="song-card" onclick="toggle(this)">
@@ -1230,6 +1254,9 @@
         </div>
       </div>
     </div>
+
+    </div><!-- /song-list-inner -->
+    </div><!-- /reserve-block -->
 
   </div><!-- /song-list -->
   </div><!-- /day-fri -->
