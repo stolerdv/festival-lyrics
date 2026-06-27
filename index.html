@@ -470,6 +470,17 @@
     body.pseudo-fullscreen .pseudo-fs-exit {
       display: flex;
     }
+
+    .instrumental-note {
+      text-align: center;
+      font-size: 13px;
+      font-style: italic;
+      color: var(--muted);
+      padding: 10px 14px;
+      border: 1px dashed var(--border);
+      border-radius: 10px;
+      margin-bottom: 4px;
+    }
   </style>
 </head>
 <body>
@@ -1319,14 +1330,93 @@
   <div class="day-section" id="day-sat">
   <div class="song-list">
 
-    <div class="reserve-block">
-    <div class="block-title">Запас</div>
-    <div class="song-list-inner">
+    <div class="instrumental-note">За 15 минут до начала — просто инструментал</div>
+
+    <div class="block-title">Блок 1</div>
 
     <!-- ══ Песня 1 ══ -->
     <div class="song-card" onclick="toggle(this)">
       <div class="song-header">
         <div class="song-num">1</div>
+        <div class="song-info">
+          <div class="song-name">Ночь</div>
+          <div class="song-author">Губин</div>
+        </div>
+        <div class="song-arrow">▾</div>
+      </div>
+      <div class="song-body">
+        <div class="lyrics">
+          <div class="section">
+            <div class="section-label">1 куплет</div>
+            Нет, я не буду говорить, что я всё готов простить<br>
+            И обид не помню я<br>
+            Но, ты же знаешь всё равно, что в душе моей темно<br>
+            Если рядом нет тебя
+          </div>
+
+          <div class="section">
+            <div class="section-label">Бридж</div>
+            Ночь, ожиданья холод, боль, словно я расколот<br>
+            Я ничего не вижу, сам себя я ненавижу<br>
+            Вновь слёзы ниоткуда, в кровь я кусаю губы<br>
+            Всё, что мне сегодня надо — просто быть с тобою рядом
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Ночь, что за странная свобода: от заката до восхода<br>
+            Ждать тебя, надеясь вновь, о-о-о<br>
+            День, я прошу тебя — не надо от восхода до заката<br>
+            Говорить мне про любовь, о-о-о
+          </div>
+
+          <div class="section">
+            <div class="section-label">2 куплет</div>
+            Нет, я не буду говорить, что хочу тебя забыть<br>
+            И не вспомнить никогда<br>
+            Но ты должна меня понять — просто я устану ждать<br>
+            И, быть может, навсегда
+          </div>
+
+          <div class="section">
+            <div class="section-label">Бридж 2</div>
+            Пусть ты меня не слышишь, пусть голос твой всё тише<br>
+            Я буду верить в чудо — просто так, из ниоткуда<br>
+            Нет, не хочу я много. Всё, что прошу у Бога<br>
+            Мне так мало в жизни надо — с нею быть сегодня рядом
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Ночь, что за странная свобода: от заката до восхода<br>
+            Ждать тебя, надеясь вновь, о-о-о<br>
+            День, я прошу тебя — не надо от восхода до заката<br>
+            Говорить мне про любовь, о-о-о
+          </div>
+
+          <div class="section">
+            <div class="section-label">Бридж <span class="section-repeat">повтор</span></div>
+            Ночь, ожиданья холод, боль, словно я расколот<br>
+            Я ничего не вижу, сам себя я ненавижу<br>
+            Вновь слёзы ниоткуда, в кровь я кусаю губы<br>
+            Всё, что мне сегодня надо — просто быть с тобою рядом
+          </div>
+
+          <div class="section">
+            <div class="section-label">Финальный припев <span class="section-repeat">× 3</span></div>
+            Ночь, что за странная свобода: от заката до восхода<br>
+            Ждать тебя, надеясь вновь, о-о-о<br>
+            День, я прошу тебя — не надо от восхода до заката<br>
+            Говорить мне про любовь, о-о-о
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ Песня 2 ══ -->
+    <div class="song-card" onclick="toggle(this)">
+      <div class="song-header">
+        <div class="song-num">2</div>
         <div class="song-info">
           <div class="song-name">Выше неба и земли</div>
           <div class="song-author">SokolovBrothers</div>
@@ -1362,10 +1452,10 @@
       </div>
     </div>
 
-    <!-- ══ Песня 2 ══ -->
+    <!-- ══ Песня 3 ══ -->
     <div class="song-card" onclick="toggle(this)">
       <div class="song-header">
-        <div class="song-num">2</div>
+        <div class="song-num">3</div>
         <div class="song-info">
           <div class="song-name">Прекрасен Ты</div>
           <div class="song-author">KCLCWORSHIP</div>
@@ -1390,10 +1480,10 @@
 
           <div class="section">
             <div class="section-label">2 куплет</div>
-            И вижу я на кресте Тебя,<br>
-            Ты кровью истекал и умер, чтоб спасти меня.<br>
-            Вознёсся Ты и на престол воссел Свой.<br>
-            Скоро мы придём домой. Прекрасен Ты!
+            И ночью я Твою вижу власть.<br>
+            Ты движешь все планеты вселенной, Бог Ты Царь.<br>
+            Сияньем звёзд восхищаемся мы<br>
+            И всё творенье говорит: «Прекрасен Ты!»
           </div>
 
           <div class="section">
@@ -1404,10 +1494,10 @@
 
           <div class="section">
             <div class="section-label">3 куплет</div>
-            Когда взойдёт вечной жизни рассвет,<br>
-            Где смерть уже не царствует и слёз больше нет.<br>
-            На брачный пир с ликованьем войдём.<br>
-            И как Твоя невеста мы споём: Прекрасен Ты!
+            И вижу я на кресте Тебя,<br>
+            Ты кровью истекал и умер, чтоб спасти меня.<br>
+            Навеки Ты на трон воссел Свой.<br>
+            Скоро мы придём домой. Прекрасен Ты!
           </div>
 
           <div class="section">
@@ -1417,20 +1507,26 @@
           </div>
 
           <div class="section">
-            <div class="section-label">Концовка</div>
-            В лучах зари я вижу Твой лик<br>
-            И все оттенки утра есть в глазах Твоих.<br>
-            Стремится мир навстречу новому дню,<br>
-            Я в небо посмотрев скажу: «Прекрасен Ты!»
+            <div class="section-label">4 куплет</div>
+            Когда взойдёт вечной жизни рассвет,<br>
+            Где смерть уже не царствует и слёз больше нет.<br>
+            На брачный пир с ликованьем взойдём.<br>
+            Как Агнца невеста там споём: Прекрасен Ты!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            О-о-о-о-о-о! Прекрасен Ты<br>
+            О-о-о-о-о-о! Прекрасен Ты
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ══ Песня 3 ══ -->
+    <!-- ══ Песня 4 ══ -->
     <div class="song-card" onclick="toggle(this)">
       <div class="song-header">
-        <div class="song-num">3</div>
+        <div class="song-num">4</div>
         <div class="song-info">
           <div class="song-name">Нет подобного Тебе</div>
           <div class="song-author">SokolovBrothers</div>
@@ -1466,33 +1562,15 @@
       </div>
     </div>
 
-    <!-- ══ Песня 4 ══ -->
-    <div class="song-card" onclick="toggle(this)">
-      <div class="song-header">
-        <div class="song-num">4</div>
-        <div class="song-info">
-          <div class="song-name">Название песни 4</div>
-          <div class="song-author">Исполнитель</div>
-        </div>
-        <div class="song-arrow">▾</div>
-      </div>
-      <div class="song-body">
-        <div class="lyrics">
-          <div class="section">
-            <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="block-title">Блок «Глубокий»</div>
 
     <!-- ══ Песня 5 ══ -->
     <div class="song-card" onclick="toggle(this)">
       <div class="song-header">
         <div class="song-num">5</div>
         <div class="song-info">
-          <div class="song-name">Название песни 5</div>
-          <div class="song-author">Исполнитель</div>
+          <div class="song-name">Я не буду рабом греха</div>
+          <div class="song-author">4U Band</div>
         </div>
         <div class="song-arrow">▾</div>
       </div>
@@ -1500,7 +1578,43 @@
         <div class="lyrics">
           <div class="section">
             <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
+            Ты нашёл меня, и избавлен я<br>
+            Тобой, Спаситель мой.<br>
+            Побеждён мой страх, и повержен враг —<br>
+            Теперь я навеки Твой!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Я не буду рабом греха<br>
+            Ведь я — дитя Царя<br>
+            Я не буду рабом греха<br>
+            Ведь я — дитя Царя
+          </div>
+
+          <div class="section">
+            <div class="section-label">2 куплет</div>
+            До рождения Ты избрал меня,<br>
+            С любовью мне имя дал<br>
+            Я родился вновь через Твою кровь,<br>
+            Твоим навеки стал
+          </div>
+
+          <div class="section">
+            <div class="section-label">Бридж 1</div>
+            В Твоих объятиях, в Твоём спасении,<br>
+            Душа ликует песнью избавления!<br>
+            Мы навек свободны, пали рабства цепи!<br>
+            Давайте праздновать победу, ведь мы — Божьи дети!<br>
+            О-о-о-о-о-о-о-о-о-о-о-о-о-о-о-о
+          </div>
+
+          <div class="section">
+            <div class="section-label">Бридж 2</div>
+            Раздвинул воды моря, чтоб пройти мне<br>
+            Изгнала страх любовь Твоя<br>
+            Ты спас меня, и я готов петь вечно,<br>
+            Что я — дитя Царя
           </div>
         </div>
       </div>
@@ -1511,28 +1625,55 @@
       <div class="song-header">
         <div class="song-num">6</div>
         <div class="song-info">
-          <div class="song-name">Название песни 6</div>
-          <div class="song-author">Исполнитель</div>
+          <div class="song-name">Как Он любит нас</div>
+          <div class="song-author">Alfa Church</div>
         </div>
         <div class="song-arrow">▾</div>
       </div>
       <div class="song-body">
         <div class="lyrics">
           <div class="section">
-            <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
+            <div class="section-label">Куплет</div>
+            Он заботлив ко мне, святая любовь наполняет везде.<br>
+            Как ветка, я гнусь под ветрами Его благодати.<br>
+            Когда размышляю о славе Твоей, уходит весь страх и сомнение,<br>
+            И я понимаю то, как Ты велик, любовью даёшь утешение…
+          </div>
+
+          <div class="section">
+            <div class="section-label">Пред-припев</div>
+            О как Он любит нас!<br>
+            О как Он любит, как Он любит нас!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Как Он любит! О как Он любит!<br>
+            О как Он любит! Как Он любит нас!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Бридж</div>
+            Мы взяты в удел Его, Он наш Спаситель,<br>
+            Бесценный подарок, наш Искупитель.<br>
+            Его благодать — океан, в котором мы тонем.<br>
+            И небо так нежно коснётся земли,<br>
+            Сердце тревожно забьётся внутри,<br>
+            А мысли лишь об одном: о том, как Он любит нас
           </div>
         </div>
       </div>
     </div>
+
+    <div class="block-title">Блок 3</div>
 
     <!-- ══ Песня 7 ══ -->
     <div class="song-card" onclick="toggle(this)">
       <div class="song-header">
         <div class="song-num">7</div>
         <div class="song-info">
-          <div class="song-name">Название песни 7</div>
-          <div class="song-author">Исполнитель</div>
+          <div class="song-name">Бездонный океан</div>
+          <div class="song-author"></div>
         </div>
         <div class="song-arrow">▾</div>
       </div>
@@ -1540,8 +1681,192 @@
         <div class="lyrics">
           <div class="section">
             <div class="section-label">1 куплет</div>
-            Текст будет добавлен…
+            Я не могу молчать, мысли все о Тебе<br>
+            Ты прикоснулся силой и исцелил во мне<br>
+            Каждую боль мою, каждую рану.
           </div>
+
+          <div class="section">
+            <div class="section-label">Проигрыш</div>
+            (Без слов)
+          </div>
+
+          <div class="section">
+            <div class="section-label">2 куплет</div>
+            Я поделюсь с Тобой каждой своей мечтой<br>
+            Всё, чем пылает сердце, я поделюсь с Тобой<br>
+            Мыслями и душой я улетаю.
+          </div>
+
+          <div class="section">
+            <div class="section-label">Проигрыш</div>
+            (Без слов)
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Ты моё сердцебиение, Ты мой пульс внутри<br>
+            Мой корабль на волнах Твоей любви<br>
+            Мне Тобою не напиться, мой бездонный океан<br>
+            Весь мой путь длиною в жизнь Тобою дан.<br>
+            Ведь мой путь длиною в жизнь Тобою дан.
+          </div>
+
+          <div class="section">
+            <div class="section-label">Проигрыш</div>
+            (Без слов)
+          </div>
+
+          <div class="section">
+            <div class="section-label">3 куплет</div>
+            Ты разукрасил мир, в котором я живу,<br>
+            Красками цвета неба выкрасил жизнь мою<br>
+            Я не могу молчать, силу во мне яви Свою.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ Песня 8 ══ -->
+    <div class="song-card" onclick="toggle(this)">
+      <div class="song-header">
+        <div class="song-num">8</div>
+        <div class="song-info">
+          <div class="song-name">Давайте славить Бога</div>
+          <div class="song-author">Открытое небо</div>
+        </div>
+        <div class="song-arrow">▾</div>
+      </div>
+      <div class="song-body">
+        <div class="lyrics">
+          <div class="section">
+            <div class="section-label">1 куплет</div>
+            Есть на планете счастливый народ,<br>
+            Праведно с Богом в победе живёт,<br>
+            В хаосе жизни он Господу песни поёт.<br>
+            Этим народом являемся мы,<br>
+            Бывшие узники мрака и тьмы —<br>
+            Божьими стали навеки детьми.
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Давайте славить Бога! Давайте славить Бога!<br>
+            Но только будем славить так, чтоб слышала вся земля.<br>
+            Для тех, кто славит Бога, на небо есть дорога,<br>
+            И по дороге в небеса можем двигаться ты и я!
+          </div>
+
+          <div class="section">
+            <div class="section-label">2 куплет</div>
+            Если во тьме жить устанет народ,<br>
+            Слово от Бога для жизни возьмёт —<br>
+            Этот народ не узнает никто через год.<br>
+            Скоро изменится наша земля,<br>
+            Станет великою Божья семья.<br>
+            Где Дух Святой, там свобода всегда!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев <span class="section-repeat">модуляция +1</span></div>
+            Давайте славить Бога! Давайте славить Бога!<br>
+            Но только будем славить так, чтоб слышала вся земля.<br>
+            Для тех, кто славит Бога, на небо есть дорога,<br>
+            И по дороге в небеса можем двигаться ты и я!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reserve-block">
+    <div class="block-title">Запас</div>
+    <div class="song-list-inner">
+
+    <!-- ══ Песня 9 ══ -->
+    <div class="song-card" onclick="toggle(this)">
+      <div class="song-header">
+        <div class="song-num">9</div>
+        <div class="song-info">
+          <div class="song-name">Славь</div>
+          <div class="song-author"></div>
+        </div>
+        <div class="song-arrow">▾</div>
+      </div>
+      <div class="song-body">
+        <div class="lyrics">
+
+          <div class="section">
+            <div class="section-label">Запев</div>
+            Давай прославь, душа моя<br>
+            Господа, Господа
+          </div>
+
+          <div class="section">
+            <div class="section-label">1 куплет</div>
+            Я славлю в долинах, хвалю на вершинах<br>
+            Когда я уверен и сомненьем томимый<br>
+            Врагом окружённый, я воздам славу Богу<br>
+            Хвала — это воды, враги в них утонут!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Пред-припев</div>
+            Пока есть дыхание<br>
+            Есть основанье
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Прославь, душа, Господа!<br>
+            Славь, душа, Господа!
+          </div>
+
+          <div class="section">
+            <div class="section-label">2 куплет</div>
+            В порыве эмоций, и когда я спокоен<br>
+            Я славлю, ведь знаю, что всё под контролем<br>
+            Хвалой я сражаюсь — это больше, чем звук<br>
+            Хвалой стены пусть Иерихона падут
+          </div>
+
+          <div class="section">
+            <div class="section-label">Пред-припев</div>
+            Пока есть дыхание<br>
+            Есть основанье
+          </div>
+
+          <div class="section">
+            <div class="section-label">Припев</div>
+            Прославь, душа, Господа!<br>
+            Славь, душа, Господа!<br>
+            Я буду кричать: «Жив Бог, чтоб спасать»<br>
+            Внутри это не удержать<br>
+            Давай, прославь, душа, Господа!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Бридж <span class="section-repeat">× 2</span></div>
+            Ты Царь вселенной, Ты в силе грядёшь<br>
+            Ты смерть победил и Ты в славу ведёшь<br>
+            Ты верен вовеки, Ты истинный Бог<br>
+            Сильнее Тебя в мире нет никого
+          </div>
+
+          <div class="section">
+            <div class="section-label">Финальный припев</div>
+            Прославь, душа, Господа!<br>
+            Славь, душа, Господа! <span class="section-repeat">× 2</span><br>
+            Я буду кричать: «Жив Бог, чтоб спасать»<br>
+            Внутри это не удержать <span class="section-repeat">× 3</span><br>
+            Давай, прославь, душа, Господа!
+          </div>
+
+          <div class="section">
+            <div class="section-label">Концовка</div>
+            Давай прославь, душа моя<br>
+            Господа, Господа
+          </div>
+
         </div>
       </div>
     </div>
