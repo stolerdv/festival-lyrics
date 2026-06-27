@@ -74,6 +74,12 @@
       justify-content: space-between;
       gap: 6px;
       backdrop-filter: blur(8px);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    body.pseudo-fullscreen .toolbar {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
     }
     .toolbar-title {
       font-size: 12px;
@@ -443,6 +449,27 @@
       -webkit-tap-highlight-color: transparent;
     }
     .reveal-link:active { opacity: 0.5; }
+
+    .pseudo-fs-exit {
+      display: none;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 200;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--tag);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0.6;
+    }
+    body.pseudo-fullscreen .pseudo-fs-exit {
+      display: flex;
+    }
   </style>
 </head>
 <body>
@@ -1325,6 +1352,12 @@
 
 </div><!-- /container -->
 
+<div class="pseudo-fs-exit" onclick="toggleFullscreen()" title="Выйти из полного экрана">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 3v3a2 2 0 0 1-2 2H3M21 8h-3a2 2 0 0 1-2-2V3M3 16h3a2 2 0 0 1 2 2v3M16 21v-3a2 2 0 0 1 2-2h3"/>
+  </svg>
+</div>
+
 <script>
   // ── Accordion (only within active day) ──
   function toggle(card) {
@@ -1384,19 +1417,32 @@
   else if (today.getMonth() === 5 && today.getDate() === 27) switchDay('sat');
 
   // ── Fullscreen ──
+  // iOS Safari doesn't support the Fullscreen API for regular pages,
+  // so we fall back to hiding the toolbar and using the full viewport.
+  const fsSupported = !!(document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen);
+
+  function setFsIcons(full) {
+    document.getElementById('icon-expand').style.display = full ? 'none' : '';
+    document.getElementById('icon-shrink').style.display = full ? '' : 'none';
+  }
+
   function toggleFullscreen() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch(() => {});
+    if (fsSupported) {
+      const requestFs = document.documentElement.requestFullscreen || document.documentElement.webkitRequestFullscreen;
+      const exitFs = document.exitFullscreen || document.webkitExitFullscreen;
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        requestFs.call(document.documentElement).catch(() => {});
+      } else {
+        exitFs.call(document);
+      }
     } else {
-      document.exitFullscreen();
+      document.body.classList.toggle('pseudo-fullscreen');
+      setFsIcons(document.body.classList.contains('pseudo-fullscreen'));
     }
   }
 
-  document.addEventListener('fullscreenchange', () => {
-    const full = !!document.fullscreenElement;
-    document.getElementById('icon-expand').style.display = full ? 'none' : '';
-    document.getElementById('icon-shrink').style.display = full ? '' : 'none';
-  });
+  document.addEventListener('fullscreenchange', () => setFsIcons(!!document.fullscreenElement));
+  document.addEventListener('webkitfullscreenchange', () => setFsIcons(!!document.webkitFullscreenElement));
 </script>
 
 </body>
