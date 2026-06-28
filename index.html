@@ -479,9 +479,58 @@
       border-radius: 10px;
       margin-bottom: 4px;
     }
+
+    .thanks-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 300;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 32px 24px;
+    }
+    .thanks-icon { font-size: 44px; margin-bottom: 18px; }
+    .thanks-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+    .thanks-text {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.6;
+      max-width: 320px;
+      margin-bottom: 28px;
+    }
+    .thanks-btn {
+      background: var(--accent);
+      color: var(--bg);
+      border: none;
+      border-radius: 12px;
+      padding: 14px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      touch-action: manipulation;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .thanks-btn:active { opacity: 0.7; }
   </style>
 </head>
 <body>
+
+<div class="thanks-screen" id="thanks-screen">
+  <div class="thanks-icon">🙏</div>
+  <div class="thanks-title">Спасибо за фестиваль!</div>
+  <div class="thanks-text">Это были незабываемые два дня вместе.<br>Благодарим, что были с нами!</div>
+  <button class="thanks-btn" onclick="document.getElementById('thanks-screen').style.display='none'">Хочу посмотреть тексты песен</button>
+</div>
 
 <div class="toolbar">
   <div class="controls">
